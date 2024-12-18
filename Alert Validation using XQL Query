@@ -1,0 +1,5 @@
+dataset = alerts
+ | fields alert_name, local_ip , remote_ip , _time , alert_id , host_name , description, action , alert_source , user_name , severity , incident_id , initiated_by , cgo_name , os_parent_name , initiator_cmd , cgo_cmd , initiator_signer , cgo_signer ,
+ category , module , cgo_path , initiator_path , file_name , file_path , misc , remote_port , local_port , rule_id , url , target_process_name , target_process_cmd , rule_id , is_phishing , process_execution_signer , host_ip , event_id , alert_id
+ | filter alert_name = "Suspicious Process Creation"   //Alert Name
+ | sort asc _time
